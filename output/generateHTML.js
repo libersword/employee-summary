@@ -12,12 +12,12 @@ function generateHTML(data) {
   <style>
       .ul{
           list-style-type:none;
-          right: -200px;
+          right: 0;
           position: relative;
       }
       li{
           float: left;
-          margin-left: 20px;
+          margin: 20px;
       }
       .cardbody{
           width: 200px;
@@ -28,9 +28,11 @@ function generateHTML(data) {
 <div class="jumbotron" style="background: gray" >
   <h1 class="text-center" >Company Employees</h1>
   </div>
+  <div class='container'>
   <ul class="ul">
   ${makeCards(data)}
   </ul>
+  </div>
 </body>
 </html>
 `;
@@ -76,7 +78,7 @@ function makeManagerCard(x) {
         </div>
         <div class="form-group">
             <label for="reserve-phone" id="reserve-office-number">Office Number: ${
-              x.officeNumber
+              x.office
             }</label>					
         </div>				
         </form>
